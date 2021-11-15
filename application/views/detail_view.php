@@ -52,7 +52,7 @@
       <div class="showcase-rt-top">
         <div class="pull-left shoe-name">
           <h3><?php echo $detail[0]->nama_produk; ?></h3>
-          <h4><?php echo $this->all_model->format_harga($detail[0]->harga); ?> / hari</h4>
+          <h4><?php echo $this->all_model->format_harga($detail[0]->harga); ?> / orang</h4>
         </div>
         <div class="clearfix"></div>
       </div>
@@ -61,18 +61,18 @@
         <form class="" action="<?php echo base_url('sewa/tambah_sewa') ?>" method="post">
           <div class="float-qty-chart">
             <ul>
-              <li class="qty">
+              <!-- <li class="qty">
                 <h4>Tanggal</h4>
                 <input type="hidden" name="produk_id" value="<?php echo $detail[0]->produk_id; ?>" required>
                 <input type="hidden" name="nama_produk" value="<?php echo $detail[0]->nama_produk; ?>" required>
                 <input type="hidden" name="harga" value="<?php echo $detail[0]->harga; ?>" required>
                 <input type="date" name="tanggal" class="form-control" required>
-              </li>
+              </li> -->
               <!-- <li class="qty">
                             <h4>Harga</h4>
                             <input type="date" name="sampai" class="form-control" required>
                         </li> -->
-              <li class="qty">
+              <!-- <li class="qty">
                 <h4>Pilih Waktu</h4>
                 <select class="form-control qnty-chrt" name="qty" required>
                   <option value="1">08.00 - 10.00</option>
@@ -80,16 +80,16 @@
                   <option value="3">13.00 - 15.00</option>
                   <option value="4">15.00 -17.00 </option>
                   <option value="5">19.00 - 21.00</option>
-                </select>
+                </select> -->
               </li>
             </ul>
             <div class="clearfix"></div>
           </div>
-          <ul>
+          <!-- <ul>
             <li class="ad-2-crt simpleCart_shelfItem">
               <button type="submit" role="button" class="btn">Sewa</button>
             </li>
-          </ul>
+          </ul> -->
         </form>
       </div>
       <div class="showcase-last">
@@ -97,7 +97,7 @@
         <ul>
           <li><?php echo $detail[0]->deskripsi; ?></li>
         </ul>
-        <p>Sewa Dapat Masker Gratis Selamat Pandemi Covid - 19
+        <p>Dapat Masker Gratis Selamat Pandemi Covid-19
       </div>
     </div>
     <div class="clearfix"></div>

@@ -11,7 +11,7 @@
   <div class="container">
     <div class="reg">
       <h3><?php echo $tentang[0]->judul;?></h3>
-      <p align="justify"><?php echo $tentang[0]->isi;?>
+      <p allign="justify"><?php echo $tentang[0]->isi;?>
       </p>
     </div>
   </div>

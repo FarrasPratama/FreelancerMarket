@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-    <title>JASA FREELANCE ONLINE</title>
+    <title>VISTAY</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="keywords" content="" />
@@ -95,7 +95,7 @@
                     <span class="icon-bar"></span>
                   </button>
                   <div class="logo">
-                      <a href="<?php echo base_url();?>">JASA FREELANCE ONLINE</a>
+                      <a href="<?php echo base_url();?>">VISTAY</a>
                   </div>
                 </div>
 

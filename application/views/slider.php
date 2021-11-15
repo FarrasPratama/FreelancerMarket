@@ -12,16 +12,16 @@
           <!-- Wrapper for slides -->
           <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="https://www.glassdoor.com/blog/app/uploads/sites/2/iStock-585051592-1-750x450.jpg" width="500">
+                <img src="https://cdn.idntimes.com/content-images/post/20211004/infodufan-1633328773486379-fdc901f6aa4bfe7598959a59e40623e8_600x400.jpg" width="500">
                 <div class="carousel-caption car-re-posn">
-                    <h3>Harga Terjangkau</h3>
+                    <h3>Dufan</h3>
                     <span class="color-bar"></span>
                 </div>
             </div>
             <div class="item">
-              <img src="https://ngopimovement.org/wp-content/uploads/2017/05/1-11.jpg" width="500" height="200px" >
+              <img src="https://anekatempatwisata.com/wp-content/uploads/2018/04/Taman-Mini-Indonesia-Indah.jpg" width="500" height="200px" >
                 <div class="carousel-caption car-re-posn">
-                    <h3>Terpercaya</h3>
+                    <h3>TMII</h3>
                     <span class="color-bar"></span>
                 </div>
             </div>

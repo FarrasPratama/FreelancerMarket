@@ -68,7 +68,7 @@
     <!-- Logo -->
     <a href="<?php echo base_url('dashboard')?>" class="logo">
       <span class="logo-mini"><b>A</b>LT</span>
-      <span class="logo-lg"><b>Jasa Freelance</b></span>
+      <span class="logo-lg"><b>VISTAY Admin</b></span>
     </a>
     <nav class="navbar navbar-static-top">
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
