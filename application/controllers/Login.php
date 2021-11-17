@@ -17,7 +17,7 @@ class Login extends CI_Controller
   public function aksi_login() {
     $user = $this->all_model->get_where(
       array(
-        'email'     => $this->input->post('email'),
+        'nama_lengkap'     => $this->input->post('nama'),
         'password'  => $this->input->post('password')
       ),
       'users'

@@ -9,7 +9,7 @@
         <form data-parsley-validate action="<?php echo base_url('data_produk/simpan')?>" method="post" enctype="multipart/form-data">
           <div class="col-sm-6">
             <div class="form-group">
-              <label>Nama Sewa</label>
+              <label>Nama Wisata</label>
               <input class="form-control" type="text" name="nama_produk" value="<?php echo (!empty($produk[0]->nama_produk)) ? $produk[0]->nama_produk : ''?>" required>
             </div>
             <div class="form-group">

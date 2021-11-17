@@ -28,6 +28,12 @@ class Produk extends CI_Controller {
     $this->load->view('produk_view', $data);
   }
 
+  public function search(){
+    $keyword = $this->input->post('keyword');
+    $data['produk'] = $this->all_model->get_keyword($keyword);
+    $this->load->view('home_view', $data);
+  }
+
 }
 
  ?>

@@ -1,4 +1,5 @@
-<?php $this->load->view('header') ?>
+<?php $this->load->view('header'); ?>
+<?php $this->load->helper('form'); ?>
 <div class="head-bread">
     <div class="container">
         <ol class="breadcrumb">
@@ -6,6 +7,13 @@
             <li><a href="<?php echo base_url('produk')?>">Produk</a></li>
         </ol>
     </div>
+</div>
+
+<div class="navbar-form navbar-right">
+  <?php echo form_open('Produk/search') ?>
+  <input type="text" name="keyword" class="form-control" placeholder="Search">
+  <button type="submit" class="btn btn-success">Search</button>
+  <?php echo form_close() ?>
 </div>
 
 <div class="products-gallery">
@@ -25,7 +33,7 @@
                           <h3>'.$p->nama_produk.'</h3>
                       </div>
                       <div class="pull-right styl-price">
-                        <p><a  href="#" class="item_add"><span class=" item_price">'.$this->all_model->format_harga($p->harga).'</span></a></p>
+                        <p><a  href="#" class="item_add"><span class=" item_price">'.$p->nama_kategori.'</span></a></p>
                       </div>
                       <div class="clearfix"></div>
                   </div></div>

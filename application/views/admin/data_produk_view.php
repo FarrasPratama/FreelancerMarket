@@ -13,7 +13,7 @@
           <thead>
             <tr>
               <th>No</th>
-              <th>Nama Sewa</th>
+              <th>Nama Wisata</th>
               <th>Kategori</th>
               <th>Harga</th>
               <th>Aksi</th>

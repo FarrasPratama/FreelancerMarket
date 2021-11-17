@@ -34,7 +34,7 @@ div textarea {
       <?php echo $this->session->flashdata('msg');?>
        <form data-parsley-validate action="<?php echo base_url('daftar/simpan')?>" method="post">
         <ul>
-          <li class="text-info">Nama Lengkap: </li>
+          <li class="text-info">Username: </li>
           <li><input type="text" name="nama" required></li>
         </ul>
         <ul>

@@ -121,6 +121,14 @@ class All_model extends CI_model {
     return $this->db->get()->result();
   }
 
+  public function get_keyword($keyword){
+    $this->db->select('produk.*, kategori.nama_kategori as nama_kategori');
+    $this->db->from('produk');
+    $this->db->join('kategori', 'kategori.kategori_id = produk.kategori_id');
+    $this->db->like('nama_produk', $keyword);
+    return $this->db->get()->result();
+  }
+
 }
 
  ?>

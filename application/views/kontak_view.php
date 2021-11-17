@@ -12,7 +12,7 @@
     <div class="reg">
       <h3><?php echo $tentang[1]->judul;?></h3>
       <div class="col-sm-6">
-        <p align="justify"><?php echo $tentang[1]->isi;?>
+        <p allign="justify"><?php echo $tentang[1]->isi;?>
         </p>
       </div>
     </div>
