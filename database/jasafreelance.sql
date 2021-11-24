@@ -37,8 +37,11 @@ CREATE TABLE `kategori` (
 --
 
 INSERT INTO `kategori` (`kategori_id`, `nama_kategori`) VALUES
-(6, 'Pemograman'),
-(7, 'Desain');
+(7, 'Religi'),
+(8, 'Pantai'),
+(9, 'Sejarah'),
+(10, 'Fun Park'),
+(11, 'Fauna');
 
 -- --------------------------------------------------------
 
@@ -61,28 +64,12 @@ CREATE TABLE `produk` (
 --
 
 INSERT INTO `produk` (`produk_id`, `kategori_id`, `nama_produk`, `harga`, `deskripsi`, `gambar`, `created_on`) VALUES
-(13, '7', 'Jasa Desain Brosur', '100000', 'Jasa Desain Brosur Terpercaya', '91aad06f0fe1d5993c4ef008d1734b39.jpg', '2021-05-23 18:23:36'),
-(14, '7', 'Jasa Desain Banner', '50000', 'Jasa Desain Banner Harga Terjangkau', 'a28b914b0558ac0516cc4c430f64c513.jpg', '2021-05-23 18:24:12'),
-(15, '6', 'Jasa Pembuatan Website', '1000000', 'Jasa Pembuatan Website', '8781dc8e659156a95c2e0026614df1e9.jpg', '2021-05-23 18:31:34');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `transaksi`
---
-
-CREATE TABLE `transaksi` (
-  `transaksi_id` int(11) NOT NULL,
-  `user_id` varchar(45) DEFAULT NULL,
-  `produk_id` varchar(45) DEFAULT NULL,
-  `tanggal` varchar(255) DEFAULT NULL,
-  `waktu` varchar(45) DEFAULT NULL,
-  `harga` varchar(45) DEFAULT NULL,
-  `status` enum('1','0','2') DEFAULT '0' COMMENT '2 kembali',
-  `bukti` text DEFAULT NULL,
-  `created_on` datetime DEFAULT current_timestamp(),
-  `waktutransaksi` int(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+(16, '8', 'Ancol', '50000', 'Ancol Taman Impian tempat rekreasi terbesar di Indonesia. Beli tiket dufan, sea world, atlantis, samudra dan lainnya di ancol.com', '9613fbdffec702f302c7e11564c41af0.jpg', '2021-11-15 23:00:49'),
+(17, '10', 'Dufan', '25000', 'Dufan berada di kawasan Taman Impian Jaya Ancol, tepatnya di Jalan Lodan Timur No.7, Ancol, Jakarta Utara. Lokasinya pun cukup strategis sehingga mudah ...', '4d99eb48f5756d2c9443caca88b7fe50.jpg', '2021-11-15 23:01:55'),
+(18, '10', 'Taman Mini Indonesia Indah', '30000', 'Taman Mini Indonesia Indah merupakan suatu kawasan taman wisata bertema budaya Indonesia di Jakarta Timur. Area seluas kurang lebih 150 hektare atau 1,5 kilometer persegi ini terletak pada koordinat 6°18?6.8?LS,106°53?47.2?BT', 'caa906bcb3818d8aed645757fd125a7d.jpg', '2021-11-15 23:03:46'),
+(19, '7', 'Masjid Istiqlal', '0', 'Masjid Istiqlal, Keagungan yang Mempesona di Ibukota ... Masjid terbesar di Indonesia dan Asia Tenggara. Dibangun untuk tempat ibadah dan pengingat perjuangan', '05f1c4776d061e227bfda6187a22a61a.jpg', '2021-11-17 22:33:15'),
+(20, '9', 'Tugu Monas', '15000', 'Monumen Nasional atau yang populer disingkat dengan Monas atau Tugu Monas adalah monumen peringatan setinggi 132 meter (433 kaki) yang didirikan untuk mengenang ...', 'a202a1f5237c8e55e9ceb4d285192caf.jpg', '2021-11-17 22:36:06'),
+(21, '11', 'Kebun Binatang Ragunan', '4000', 'Kebun Binatang Ragunan adalah sebuah kebun binatang yang terletak di daerah Ragunan, Pasar Minggu, Jakarta Selatan, Indonesia. Kebun binatang seluas 140 hektare ini didirikan pada tahun 1864. Di dalamnya terdapat berbagai koleksi yang terdiri dari 295 spesies dan 4040 spesimen.', 'b1fa50c83544cad23b79ee72f3ede259.jpg', '2021-11-17 22:38:37');
 
 -- --------------------------------------------------------
 
@@ -96,7 +83,7 @@ CREATE TABLE `users` (
   `nama_lengkap` varchar(60) DEFAULT NULL,
   `email` varchar(30) DEFAULT NULL,
   `notelp` varchar(20) DEFAULT NULL,
-  `level` enum('0','1') DEFAULT '1',
+  `level` enum('0','1') DEFAULT '1', --level 1 = User; level 2 = Admin
   `blokir` varchar(1) DEFAULT '0',
   `alamat` text DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -107,7 +94,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`user_id`, `password`, `nama_lengkap`, `email`, `notelp`, `level`, `blokir`, `alamat`) VALUES
 (7, 'user', 'User', 'user@gmail.com', '08917934054', '1', '0', 'Jl. Nungcik Rt. 45 Palembang'),
-(8, 'admin', 'Administrator', 'admin@gmail.com', '08988387271', '0', '0', 'jl nungcikc');
+(8, 'admin', 'Admin', 'admin@gmail.com', '08988387271', '0', '0', 'jl nungcikc'),
+(11, 'argyges', 'argy', 'argyganteng@gmail.com', '0812345678', '1', '0', 'madiun');
 
 --
 -- Indexes for dumped tables
@@ -169,4 +157,4 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-jasafreelance
+vistay
