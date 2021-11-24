@@ -126,6 +126,8 @@ class All_model extends CI_model {
     $this->db->from('produk');
     $this->db->join('kategori', 'kategori.kategori_id = produk.kategori_id');
     $this->db->like('nama_produk', $keyword);
+    $this->db->or_like('deskripsi', $keyword);
+    $this->db->or_like('kategori.nama_kategori', $keyword);
     return $this->db->get()->result();
   }
 
