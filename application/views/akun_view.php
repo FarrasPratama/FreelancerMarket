@@ -43,7 +43,7 @@
   </form>
 
   <div class="col-sm-8">
-    <legend>Data Jasa</legend>
+    <!-- <legend>Data Jasa</legend>
     <table class="table table-hover">
       <thead>
         <tr>
@@ -57,7 +57,7 @@
           <th>Status</th>
           <th>Upload Bukti Pembayaran</th>
         </tr>
-      </thead>
+      </thead> -->
       <tbody>
         <?php if (!empty($transaksi_sewa)) :
           foreach ($transaksi_sewa as $key => $p) {
