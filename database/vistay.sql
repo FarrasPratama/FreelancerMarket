@@ -13,7 +13,6 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 -- Dumping data for table vistay.kategori: ~5 rows (approximately)
-DELETE FROM `kategori`;
 /*!40000 ALTER TABLE `kategori` DISABLE KEYS */;
 INSERT INTO `kategori` (`kategori_id`, `nama_kategori`) VALUES
 	(7, 'Edukasi'),
@@ -24,7 +23,6 @@ INSERT INTO `kategori` (`kategori_id`, `nama_kategori`) VALUES
 /*!40000 ALTER TABLE `kategori` ENABLE KEYS */;
 
 -- Dumping data for table vistay.produk: ~6 rows (approximately)
-DELETE FROM `produk`;
 /*!40000 ALTER TABLE `produk` DISABLE KEYS */;
 INSERT INTO `produk` (`produk_id`, `kategori_id`, `nama_produk`, `harga`, `deskripsi`, `gambar`, `created_on`) VALUES
 	(22, '10', 'J-SKY FERRISWHEEL, AEON MALL', '50000', 'Naiki J-Sky Ferris Wheel, kincir ria tertinggi di Indonesia dengan ketinggian 69 meter. Terletak di lantai 3 AEON Mall Jakarta Garden City, ikon terbaru Jakarta ini menawarkan pemandangan kota yang indah baik di siang maupun malam dan dilengkapi dengan teknologi tahan gempa dan petir untuk keamanan pengunjung. Lewatkan momen tak terlupakan bersama teman, keluarga, atau pasangan dalam private cabin dengan paket VVIP atau Couple, dan jangan lewatkan kesempatan untuk ber-selfie dengan latar belakang pemandangan kota yang indah\r\n\r\nJ-SKY FERRISWHEEL, AEON MALL Jakarta Garden City, RT.8/RW.6, Cakung Tim., Cakung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13470, Indonesia\r\n\r\nJAM BUKA:\r\nSenin - Minggu (14:00-20:00)\r\n\r\nREVIEW:\r\n8.9 (Baik)', '71bad85ce69ada731a44a65153153a63.jpg', '2021-11-28 17:02:17'),
@@ -36,12 +34,10 @@ INSERT INTO `produk` (`produk_id`, `kategori_id`, `nama_produk`, `harga`, `deskr
 /*!40000 ALTER TABLE `produk` ENABLE KEYS */;
 
 -- Dumping data for table vistay.transaksi: ~0 rows (approximately)
-DELETE FROM `transaksi`;
 /*!40000 ALTER TABLE `transaksi` DISABLE KEYS */;
 /*!40000 ALTER TABLE `transaksi` ENABLE KEYS */;
 
 -- Dumping data for table vistay.users: 5 rows
-DELETE FROM `users`;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`user_id`, `password`, `nama_lengkap`, `email`, `notelp`, `level`, `blokir`, `alamat`) VALUES
 	(7, 'user', 'User', 'user@gmail.com', '08917934054', '1', '0', 'Jl. Nungcik Rt. 45 Palembang'),
