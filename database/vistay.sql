@@ -12,9 +12,10 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
--- Dumping data for table vistay.kategori: ~4 rows (approximately)
+-- Dumping data for table vistay.kategori: ~5 rows (approximately)
+DELETE FROM `kategori`;
 /*!40000 ALTER TABLE `kategori` DISABLE KEYS */;
-INSERT IGNORE INTO `kategori` (`kategori_id`, `nama_kategori`) VALUES
+INSERT INTO `kategori` (`kategori_id`, `nama_kategori`) VALUES
 	(7, 'Edukasi'),
 	(8, 'Pantai'),
 	(9, 'Sejarah'),
@@ -23,8 +24,9 @@ INSERT IGNORE INTO `kategori` (`kategori_id`, `nama_kategori`) VALUES
 /*!40000 ALTER TABLE `kategori` ENABLE KEYS */;
 
 -- Dumping data for table vistay.produk: ~6 rows (approximately)
+DELETE FROM `produk`;
 /*!40000 ALTER TABLE `produk` DISABLE KEYS */;
-INSERT IGNORE INTO `produk` (`produk_id`, `kategori_id`, `nama_produk`, `harga`, `deskripsi`, `gambar`, `created_on`) VALUES
+INSERT INTO `produk` (`produk_id`, `kategori_id`, `nama_produk`, `harga`, `deskripsi`, `gambar`, `created_on`) VALUES
 	(22, '10', 'J-SKY FERRISWHEEL, AEON MALL', '50000', 'Naiki J-Sky Ferris Wheel, kincir ria tertinggi di Indonesia dengan ketinggian 69 meter. Terletak di lantai 3 AEON Mall Jakarta Garden City, ikon terbaru Jakarta ini menawarkan pemandangan kota yang indah baik di siang maupun malam dan dilengkapi dengan teknologi tahan gempa dan petir untuk keamanan pengunjung. Lewatkan momen tak terlupakan bersama teman, keluarga, atau pasangan dalam private cabin dengan paket VVIP atau Couple, dan jangan lewatkan kesempatan untuk ber-selfie dengan latar belakang pemandangan kota yang indah\r\n\r\nJ-SKY FERRISWHEEL, AEON MALL Jakarta Garden City, RT.8/RW.6, Cakung Tim., Cakung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13470, Indonesia\r\n\r\nJAM BUKA:\r\nSenin - Minggu (14:00-20:00)\r\n\r\nREVIEW:\r\n8.9 (Baik)', '71bad85ce69ada731a44a65153153a63.jpg', '2021-11-28 17:02:17'),
 	(23, '7', 'Magic Art 3D Museum', '45000', 'Akhir pekan mendatang ini, bagaimana kalau mengajak orang-orang tercinta untuk menikmati berbagai kesenian 3 dimensi di Magic Art 3D Museum Jakarta? Bertempat di Kota Tua, museum ini memiliki koleksi sekitar 100 lukisan mural yang digambar dengan tangan oleh seniman asal Korea dan Indonesia serta beberapa bentuk kesenian lainnya yang berkonsep 3 dimensi. Masuk dan jelajahilah zona-zona dengan tema menarik seperti Zona Dinosaurus, Zona Laut, Zona Horror, serta Zona Rutinitas, dan jadilah bagian dari lukisannya dengan mengambil foto-foto yang menipu mata!\r\n \r\nMagic Art 3D Museum Jakarta, Gedung Kerta Niaga 1, Unit GF &, Jl. Kali Besar Tim. No.9 3 6, Pinangsia, Tamansari, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11110, Indonesia\r\n \r\nJAM BUKA:\r\nSabtu-Minggu (10.00-17.00)\r\n\r\nREVIEW:\r\n8.7 (Baik)', 'f4eb097cf5730fc6a3db6a640a39a929.jpg', '2021-11-28 17:10:50'),
 	(24, '11', 'Jakarta Aquarium & Safari', '105000', 'Istirahat sejenak dari padatnya kota Jakarta dengan mengunjungi Jakarta Aquarium & Safari! Living Planet dalam ruangan terbesar di Indonesia ini memiliki ciri khas Taman Safari Indonesia yang bekerjasama dengan Aquaria KLCC, Malaysia. Akuarium yang kini mencakup taman safari ini juga berfungsi sebagai situs konservasi yang berlokasi di salah satu pusat perbelanjaan di kota, menjadikannya sangat mudah untuk dijangkau oleh siapa saja. \r\n \r\nNeo SOHO Floor LG, Jalan Letjen S. Parman Kav. 28, Jakarta Barat, DKI Jakarta 11470, Indonesia\r\n\r\nJAM BUKA:\r\nSenin-Minggu (10.00-21.00)\r\n\r\nREVIEW:\r\n8.6 (Baik)\r\n', '4add42d73c7e9038a02200ef68d19b38.jpg', '2021-11-28 17:15:10'),
@@ -34,12 +36,14 @@ INSERT IGNORE INTO `produk` (`produk_id`, `kategori_id`, `nama_produk`, `harga`,
 /*!40000 ALTER TABLE `produk` ENABLE KEYS */;
 
 -- Dumping data for table vistay.transaksi: ~0 rows (approximately)
+DELETE FROM `transaksi`;
 /*!40000 ALTER TABLE `transaksi` DISABLE KEYS */;
 /*!40000 ALTER TABLE `transaksi` ENABLE KEYS */;
 
 -- Dumping data for table vistay.users: 5 rows
+DELETE FROM `users`;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT IGNORE INTO `users` (`user_id`, `password`, `nama_lengkap`, `email`, `notelp`, `level`, `blokir`, `alamat`) VALUES
+INSERT INTO `users` (`user_id`, `password`, `nama_lengkap`, `email`, `notelp`, `level`, `blokir`, `alamat`) VALUES
 	(7, 'user', 'User', 'user@gmail.com', '08917934054', '1', '0', 'Jl. Nungcik Rt. 45 Palembang'),
 	(8, 'admin', 'Administrator', 'admin@gmail.com', '08988387271', '0', '0', 'jl nungcikc'),
 	(10, 'user', 'farras', 'user1@gmail.com', '081234567788', '1', '0', 'desa plandi'),
