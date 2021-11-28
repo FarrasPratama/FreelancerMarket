@@ -97,7 +97,7 @@
         <ul>
           <li><?php echo $detail[0]->deskripsi; ?></li>
         </ul>
-        <p>Dapat Masker Gratis Selamat Pandemi Covid-19
+        <p>Harus memiliki sertifikat vaksin dan mematuhi protokol kesehatan
       </div>
     </div>
     <div class="clearfix"></div>

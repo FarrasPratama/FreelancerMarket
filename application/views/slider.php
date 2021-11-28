@@ -12,16 +12,16 @@
           <!-- Wrapper for slides -->
           <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="https://cdn.idntimes.com/content-images/post/20211004/infodufan-1633328773486379-fdc901f6aa4bfe7598959a59e40623e8_600x400.jpg" width="500">
+                <img src="https://statik.tempo.co/data/2019/01/21/id_813247/813247_720.jpg" width="500">
                 <div class="carousel-caption car-re-posn">
-                    <h3>Dufan</h3>
+                    <h3>Museum Jakarta</h3>
                     <span class="color-bar"></span>
                 </div>
             </div>
             <div class="item">
-              <img src="https://anekatempatwisata.com/wp-content/uploads/2018/04/Taman-Mini-Indonesia-Indah.jpg" width="500" height="200px" >
+              <img src="https://advontura.com/wp-content/uploads/2021/01/shutterstock-508380913_1500002884-4.jpg" width="500" height="200px" >
                 <div class="carousel-caption car-re-posn">
-                    <h3>TMII</h3>
+                    <h3>Jakarta Aquarium</h3>
                     <span class="color-bar"></span>
                 </div>
             </div>
