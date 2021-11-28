@@ -12,6 +12,18 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+
+-- Dumping database structure for vistay
+CREATE DATABASE IF NOT EXISTS `vistay` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `vistay`;
+
+-- Dumping structure for table vistay.kategori
+CREATE TABLE IF NOT EXISTS `kategori` (
+  `kategori_id` int(11) NOT NULL AUTO_INCREMENT,
+  `nama_kategori` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`kategori_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+
 -- Dumping data for table vistay.kategori: ~5 rows (approximately)
 /*!40000 ALTER TABLE `kategori` DISABLE KEYS */;
 INSERT INTO `kategori` (`kategori_id`, `nama_kategori`) VALUES
@@ -21,6 +33,18 @@ INSERT INTO `kategori` (`kategori_id`, `nama_kategori`) VALUES
 	(10, 'Fun Park'),
 	(11, 'Fauna');
 /*!40000 ALTER TABLE `kategori` ENABLE KEYS */;
+
+-- Dumping structure for table vistay.produk
+CREATE TABLE IF NOT EXISTS `produk` (
+  `produk_id` int(11) NOT NULL AUTO_INCREMENT,
+  `kategori_id` varchar(45) DEFAULT NULL,
+  `nama_produk` varchar(255) DEFAULT NULL,
+  `harga` varchar(45) DEFAULT NULL,
+  `deskripsi` text,
+  `gambar` text,
+  `created_on` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`produk_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=latin1;
 
 -- Dumping data for table vistay.produk: ~6 rows (approximately)
 /*!40000 ALTER TABLE `produk` DISABLE KEYS */;
@@ -33,9 +57,37 @@ INSERT INTO `produk` (`produk_id`, `kategori_id`, `nama_produk`, `harga`, `deskr
 	(27, '7', 'Pusat Peragaan IPTEK', '25000', 'Apakah Anda sedang mencari ide liburan yang seru dan penuh wawasan? Jika ya, maka Anda harus mengunjungi PP-IPTEK di Taman Mini Indonesia Indah. Tempat ini menawarkan lebih dari sekedar museum teknologi. Di sini, Anda dapat belajar tentang sains dengan cara yang menyenangkan. Saksikan berbagai simulasi sains yang dilakukan setiap hari, seperti Tesla Coil, Roket Air, Rumah Gempa, Peneropongan Matahari, dan demo sains lainnya. Anda juga bisa menantang diri Anda dengan mengendarai sepeda kabel yang membentang beberapa meter di atas permukaan tanah. Masih banyak teknologi yang bisa Anda coba, seperti Generator Van de Graff, Self Balancing Wheel, Terowongan Ilusi, dan masih banyak lagi\r\n \r\nPusat Peragaan Iptek (PP-IPTEK), Jl. Raya Tmii, RW.10, Ceger, Kec. Cipayung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13810, Indonesia\r\n \r\nKarena batasan usia, pengunjung berusia di bawah 9 tahun dan di atas 60 tahun tidak diperbolehkan untuk masuk ke tempat rekreasi\r\n\r\nJAM BUKA:\r\nSenin-Minggu (08.30-15.30)\r\n\r\nREVIEW:\r\n8.4 (Baik)', '1ee00348d7b8bcf87d2b66f6c596547c.jpg', '2021-11-28 17:24:44');
 /*!40000 ALTER TABLE `produk` ENABLE KEYS */;
 
+-- Dumping structure for table vistay.transaksi
+CREATE TABLE IF NOT EXISTS `transaksi` (
+  `transaksi_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` varchar(45) DEFAULT NULL,
+  `produk_id` varchar(45) DEFAULT NULL,
+  `tanggal` varchar(255) DEFAULT NULL,
+  `waktu` varchar(45) DEFAULT NULL,
+  `harga` varchar(45) DEFAULT NULL,
+  `status` enum('1','0','2') DEFAULT '0' COMMENT '2 kembali',
+  `bukti` text,
+  `created_on` datetime DEFAULT CURRENT_TIMESTAMP,
+  `waktutransaksi` int(20) NOT NULL,
+  PRIMARY KEY (`transaksi_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 -- Dumping data for table vistay.transaksi: ~0 rows (approximately)
 /*!40000 ALTER TABLE `transaksi` DISABLE KEYS */;
 /*!40000 ALTER TABLE `transaksi` ENABLE KEYS */;
+
+-- Dumping structure for table vistay.users
+CREATE TABLE IF NOT EXISTS `users` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `password` varchar(60) DEFAULT NULL,
+  `nama_lengkap` varchar(60) DEFAULT NULL,
+  `email` varchar(30) DEFAULT NULL,
+  `notelp` varchar(20) DEFAULT NULL,
+  `level` enum('0','1') DEFAULT '1',
+  `blokir` varchar(1) DEFAULT '0',
+  `alamat` text,
+  PRIMARY KEY (`user_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 -- Dumping data for table vistay.users: 5 rows
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
